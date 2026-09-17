@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Email verification for contact form submission.">
+  <title>Verify Email - Aks Prasad</title>
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/header-footer.css">
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header id="header" class="header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="index.html" class="brand-logo">Aks Prasad</a>
+          <span class="brand-tagline">Web Development</span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="hero" style="padding: var(--spacing-4xl) 0;">
+      <div class="container">
+        <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+          <div id="verifying" style="display: block;">
+            <h1 style="margin-bottom: var(--spacing-lg);">Verifying Your Email...</h1>
+            <p class="text-secondary" style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-2xl);">
+              Please wait while we confirm your email address.
+            </p>
+            <div style="font-size: 3rem; animation: pulse 2s ease-in-out infinite;">⏳</div>
+          </div>
+
+          <div id="success" style="display: none;">
+            <div style="font-size: 4rem; margin-bottom: var(--spacing-lg);">✓</div>
+            <h1 style="margin-bottom: var(--spacing-lg); color: var(--color-success);">Email Verified!</h1>
+            <p class="text-secondary" style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-2xl);">
+              Thank you for confirming your email. Your project submission has been saved and I'll get back to you soon.
+            </p>
+            <a href="index.html" class="btn btn-primary btn-lg">Back to Home</a>
+          </div>
+
+          <div id="error" style="display: none;">
+            <div style="font-size: 4rem; margin-bottom: var(--spacing-lg);">✗</div>
+            <h1 style="margin-bottom: var(--spacing-lg); color: var(--color-error);">Verification Failed</h1>
+            <p class="text-secondary" style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-lg);">
+              <span id="error-message">The verification link is invalid or has expired. Please try submitting the form again.</span>
+            </p>
+            <a href="contact.html" class="btn btn-primary btn-lg">Return to Contact Form</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2024 Aks Prasad. All rights reserved.</p>
+        <p>Designed & built with modern web technologies.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/supabase-client.js"></script>
+  <script>
+    // Email verification handler
+    document.addEventListener('DOMContentLoaded', async function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const submissionId = urlParams.get('id');
+      const email = urlParams.get('email');
+
+      const verifyingDiv = document.getElementById('verifying');
+      const successDiv = document.getElementById('success');
+      const errorDiv = document.getElementById('error');
+
+      if (!submissionId || !email) {
+        verifyingDiv.style.display = 'none';
+        errorDiv.style.display = 'block';
+        document.getElementById('error-message').textContent = 'Invalid verification link.';
+        return;
+      }
+
+      try {
+        // Verify the submission by marking it as verified
+        const response = await fetch(
+          `${window.supabase.url}/rest/v1/contact_submissions?id=eq.${submissionId}`,
+          {
+            method: 'PATCH',
+            headers: {
+              'Content-Type': 'application/json',
+              'apikey': window.supabase.anonKey,
+              'Authorization': `Bearer ${window.supabase.anonKey}`
+            },
+            body: JSON.stringify({
+              verified: true,
+              verified_at: new Date().toISOString()
+            })
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        // Success
+        verifyingDiv.style.display = 'none';
+        successDiv.style.display = 'block';
+
+        console.log('Email verified successfully for:', email);
+
+      } catch (error) {
+        console.error('Verification error:', error);
+        verifyingDiv.style.display = 'none';
+        errorDiv.style.display = 'block';
+        document.getElementById('error-message').textContent = 'Something went wrong during verification. Please try submitting the form again.';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Aks Prasad for your web development project. Get in touch to discuss your website needs.">
+  <meta name="keywords" content="contact, web development, project inquiry">
+  <meta name="author" content="Aks Prasad">
+  <title>Contact - Aks Prasad Web Development</title>
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/header-footer.css">
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header id="header" class="header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="index.html" class="brand-logo">Aks Prasad</a>
+          <span class="brand-tagline">Web Development</span>
+        </div>
+
+        <button id="mobile-menu-btn" class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="btn btn-primary btn-sm">Get Started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- PAGE HERO -->
+    <section class="hero" style="padding: var(--spacing-3xl) 0;">
+      <div class="container">
+        <div style="text-align: center;">
+          <h1 class="animate-fade-in-up" style="margin-bottom: var(--spacing-md);">Get in Touch</h1>
+          <p class="animate-fade-in-up" style="font-size: var(--font-size-lg); max-width: 600px; margin: 0 auto;">
+            Have a project in mind? Let's discuss your ideas and find the perfect solution for your web development needs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section-lg">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-3xl);">
+          <!-- Contact Information -->
+          <div class="animate-fade-in-left">
+            <h2 style="margin-bottom: var(--spacing-lg);">Let's Connect</h2>
+
+            <div style="margin-bottom: var(--spacing-2xl);">
+              <h4 style="margin-bottom: var(--spacing-sm); color: var(--color-accent-primary);">Email</h4>
+              <a href="mailto:aksprasad2006@gmail.com" style="font-size: var(--font-size-lg);">aksprasad2006@gmail.com</a>
+              <p class="text-secondary" style="margin-top: var(--spacing-sm);">I typically respond within 24 hours.</p>
+            </div>
+
+            <div style="margin-bottom: var(--spacing-2xl);">
+              <h4 style="margin-bottom: var(--spacing-sm); color: var(--color-accent-primary);">WhatsApp</h4>
+              <a href="https://wa.me/9372573656" target="_blank" rel="noopener noreferrer" style="font-size: var(--font-size-lg);">Chat with me</a>
+              <p class="text-secondary" style="margin-top: var(--spacing-sm);">Quick messages and inquiries welcome.</p>
+            </div>
+
+            <div style="margin-bottom: var(--spacing-2xl);">
+              <h4 style="margin-bottom: var(--spacing-sm); color: var(--color-accent-primary);">Social Media</h4>
+              <div class="social-links">
+                <a href="https://www.fiverr.com/s/gvD4xbX" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
+                <a href="https://www.instagram.com/gamerxmagician/" target="_blank" rel="noopener noreferrer" title="Instagram">Instagram</a>
+                <a href="https://www.youtube.com/@_gamerxmagician" target="_blank" rel="noopener noreferrer" title="YouTube">YouTube</a>
+              </div>
+            </div>
+
+            <div class="card card-lg">
+              <h3 style="margin-bottom: var(--spacing-md);">Response Times</h3>
+              <ul style="list-style: none; margin-left: 0; color: var(--color-text-secondary);">
+                <li style="margin-bottom: var(--spacing-sm);">📧 <strong>Email:</strong> 24 hours</li>
+                <li style="margin-bottom: var(--spacing-sm);">💬 <strong>WhatsApp:</strong> Few hours</li>
+                <li style="margin-bottom: var(--spacing-sm);">📱 <strong>Instagram:</strong> 1-2 days</li>
+                <li style="margin-bottom: var(--spacing-sm);">🐙 <strong>GitHub:</strong> 1-2 days</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="card card-lg animate-fade-in-right">
+            <h3 style="margin-bottom: var(--spacing-lg);">Send Me a Message</h3>
+
+            <form id="contact-form">
+              <div class="form-message" id="form-message"></div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name *</label>
+                  <input type="text" id="name" name="name" required placeholder="Your name">
+                  <div class="form-error" id="name-error"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" required placeholder="your@email.com">
+                  <div class="form-error" id="email-error"></div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="project-type">Project Type *</label>
+                <select id="project-type" name="project-type" required>
+                  <option value="">Select a project type</option>
+                  <option value="business">Business Website</option>
+                  <option value="portfolio">Portfolio Website</option>
+                  <option value="landing">Landing Page</option>
+                  <option value="gaming">Gaming Website</option>
+                  <option value="education">School/Education Website</option>
+                  <option value="webapp">Web Application</option>
+                  <option value="other">Other</option>
+                </select>
+                <div class="form-error" id="project-type-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="budget">Budget Range</label>
+                <select id="budget" name="budget">
+                  <option value="">Select a budget range</option>
+                  <option value="500-1000">$500 - $1,000</option>
+                  <option value="1000-2500">$1,000 - $2,500</option>
+                  <option value="2500-5000">$2,500 - $5,000</option>
+                  <option value="5000-10000">$5,000 - $10,000</option>
+                  <option value="10000+">$10,000+</option>
+                  <option value="not-sure">Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Project Description *</label>
+                <textarea id="message" name="message" required placeholder="Tell me about your project, goals, and any specific requirements..."></textarea>
+                <div class="form-error" id="message-error"></div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Project Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section-lg" style="background-color: var(--color-bg-secondary);">
+      <div class="container">
+        <div class="cta-section animate-fade-in-up">
+          <div class="cta-section-content">
+            <h2>Ready to Start?</h2>
+            <p style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-lg);">
+              Whether you have a detailed brief or just a vague idea, I'd love to hear from you. Let's create something amazing together.
+            </p>
+            <p class="text-secondary">
+              No project is too big or too small. I work with startups, small businesses, large organizations, and individuals. Let's find the right solution for your needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Aks Prasad</h3>
+          <p>Modern websites built to make an impact.</p>
+          <div class="social-links">
+            <a href="https://www.fiverr.com/s/gvD4xbX" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
+            <a href="https://www.instagram.com/gamerxmagician/" target="_blank" rel="noopener noreferrer" title="Instagram">Instagram</a>
+            <a href="https://www.youtube.com/@_gamerxmagician" target="_blank" rel="noopener noreferrer" title="YouTube">YouTube</a>
+            <a href="mailto:aksprasad2006@gmail.com" title="Email">Email</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#business">Business Websites</a></li>
+            <li><a href="services.html#portfolio">Portfolio Sites</a></li>
+            <li><a href="services.html#landing">Landing Pages</a></li>
+            <li><a href="services.html#gaming">Gaming Websites</a></li>
+            <li><a href="services.html#education">School Websites</a></li>
+            <li><a href="services.html#apps">Web Apps</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>
+            <strong>Email:</strong><br>
+            <a href="mailto:aksprasad2006@gmail.com">aksprasad2006@gmail.com</a>
+          </p>
+          <p>
+            <strong>WhatsApp:</strong><br>
+            <a href="https://wa.me/9372573656" target="_blank">Chat with me</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Aks Prasad. All rights reserved.</p>
+        <p>Designed & built with modern web technologies.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/main.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/form-handler.js"></script>
+</body>
+</html>

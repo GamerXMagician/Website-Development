@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of web development projects showcasing business websites, portfolios, landing pages, gaming sites, school websites, and web applications.">
+  <meta name="keywords" content="portfolio, web development projects, case studies, website examples">
+  <meta name="author" content="Aks Prasad">
+  <title>Portfolio - Aks Prasad Web Development</title>
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/header-footer.css">
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header id="header" class="header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="index.html" class="brand-logo">Aks Prasad</a>
+          <span class="brand-tagline">Web Development</span>
+        </div>
+
+        <button id="mobile-menu-btn" class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="btn btn-primary btn-sm">Get Started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- PAGE HERO -->
+    <section class="hero" style="padding: var(--spacing-3xl) 0;">
+      <div class="container">
+        <div style="text-align: center;">
+          <h1 class="animate-fade-in-up" style="margin-bottom: var(--spacing-md);">Portfolio</h1>
+          <p class="animate-fade-in-up" style="font-size: var(--font-size-lg); max-width: 600px; margin: 0 auto;">
+            A showcase of recent projects demonstrating modern web development across different industries and project types.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="section-lg">
+      <div class="container">
+        <!-- Filter Buttons -->
+        <div class="filter-group animate-fade-in-up">
+          <button class="filter-btn active" data-filter="all">ALL</button>
+          <button class="filter-btn" data-filter="business">BUSINESS</button>
+          <button class="filter-btn" data-filter="portfolio">PORTFOLIO</button>
+          <button class="filter-btn" data-filter="landing">LANDING</button>
+          <button class="filter-btn" data-filter="gaming">GAMING</button>
+          <button class="filter-btn" data-filter="education">EDUCATION</button>
+          <button class="filter-btn" data-filter="webapp">WEB APPS</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-3" id="projects-grid">
+          <!-- Project 1: Business -->
+          <div class="card project-card animate-fade-in-up" data-category="business">
+            <div class="project-card-image">
+              <span>Tech Startup Website</span>
+            </div>
+            <div class="project-card-content">
+              <div>
+                <h3>TechFlow Solutions</h3>
+                <span class="project-card-category">BUSINESS</span>
+              </div>
+              <p class="text-secondary">Modern SaaS landing page with integrated contact forms and service showcase.</p>
+              <div class="project-card-technologies">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Tailwind</span>
+                <span class="tech-badge">Supabase</span>
+              </div>
+              <a href="#" class="project-card-link">
+                View Project <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2: Portfolio -->
+          <div class="card project-card animate-fade-in-up" data-category="portfolio">
+            <div class="project-card-image">
+              <span>Designer Portfolio</span>
+            </div>
+            <div class="project-card-content">
+              <div>
+                <h3>Creative Studio Portfolio</h3>
+                <span class="project-card-category">PORTFOLIO</span>
+              </div>
+              <p class="text-secondary">Beautiful portfolio with smooth animations, image gallery, and contact integration.</p>
+              <div class="project-card-technologies">
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">JavaScript</span>
+              </div>
+              <a href="#" class="project-card-link">
+                View Project <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3: Landing Page -->
+          <div class="card project-card animate-fade-in-up" data-category="landing">
+            <div class="project-card-image">
+              <span>Product Launch</span>
+            </div>
+            <div class="project-card-content">
+              <div>
+                <h3>App Launch Landing Page</h3>
+                <span class="project-card-category">LANDING</span>
+              </div>
+              <p class="text-secondary">High-converting landing page for mobile app launch with email signup form.</p>
+              <div class="project-card-technologies">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Tailwind</span>
+                <span class="tech-badge">Framer Motion</span>
+              </div>
+              <a href="#" class="project-card-link">
+                View Project <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4: Gaming -->
+          <div class="card project-card animate-fade-in-up" data-category="gaming">
+            <div class="project-card-image">
+              <span>Gaming Community</span>
+            </div>
+            <div class="project-card-content">
+              <div>
+                <h3>Pixel Legends Gaming</h3>
+                <span class="project-card-category">GAMING</span>
+              </div>
+              <p class="text-secondary">Gaming community website with member profiles, event calendar, and leaderboards.</p>
+              <div class="project-card-technologies">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">MongoDB</span>
+              </div>
+              <a href="#" class="project-card-link">
+                View Project <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 5: Education -->
+          <div class="card project-card animate-fade-in-up" data-category="education">
+            <div class="project-card-image">
+              <span>School Portal</span>
+            </div>
+            <div class="project-card-content">
+              <div>
+                <h3>Central Academy Online</h3>
+                <span class="project-card-category">EDUCATION</span>
+              </div>
+              <p class="text-secondary">Modern school website with admission forms, course listings, and event calendar.</p>
+              <div class="project-card-technologies">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Prisma</span>
+                <span class="tech-badge">PostgreSQL</span>
+              </div>
+              <a href="#" class="project-card-link">
+                View Project <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 6: Web App -->
+          <div class="card project-card animate-fade-in-up" data-category="webapp">
+            <div class="project-card-image">
+              <span>Project Management</span>
+            </div>
+            <div class="project-card-content">
+              <div>
+                <h3>TaskHub Project Manager</h3>
+                <span class="project-card-category">WEB APPS</span>
+              </div>
+              <p class="text-secondary">Full-featured project management web app with real-time collaboration and dashboards.</p>
+              <div class="project-card-technologies">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Firebase</span>
+                <span class="tech-badge">Tailwind</span>
+              </div>
+              <a href="#" class="project-card-link">
+                View Project <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 7: Business -->
+          <div class="card project-card animate-fade-in-up" data-category="business">
+            <div class="project-card-image">
+              <span>E-commerce Store</span>
+            </div>
+            <div class="project-card-content">
+              <div>
+                <h3>Digital Goods Store</h3>
+                <span class="project-card-category">BUSINESS</span>
+              </div>
+              <p class="text-secondary">E-commerce platform with product catalog, shopping cart, and payment integration.</p>
+              <div class="project-card-technologies">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Stripe</span>
+                <span class="tech-badge">Supabase</span>
+              </div>
+              <a href="#" class="project-card-link">
+                View Project <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 8: Portfolio -->
+          <div class="card project-card animate-fade-in-up" data-category="portfolio">
+            <div class="project-card-image">
+              <span>Developer Portfolio</span>
+            </div>
+            <div class="project-card-content">
+              <div>
+                <h3>Developer Showcase</h3>
+                <span class="project-card-category">PORTFOLIO</span>
+              </div>
+              <p class="text-secondary">Developer portfolio featuring projects, skills, blog, and contact information.</p>
+              <div class="project-card-technologies">
+                <span class="tech-badge">Astro</span>
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Tailwind</span>
+              </div>
+              <a href="#" class="project-card-link">
+                View Project <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 9: Landing -->
+          <div class="card project-card animate-fade-in-up" data-category="landing">
+            <div class="project-card-image">
+              <span>Course Launch</span>
+            </div>
+            <div class="project-card-content">
+              <div>
+                <h3>Online Course Launch</h3>
+                <span class="project-card-category">LANDING</span>
+              </div>
+              <p class="text-secondary">Course promotion landing page with testimonials, pricing tiers, and enrollment forms.</p>
+              <div class="project-card-technologies">
+                <span class="tech-badge">Vue.js</span>
+                <span class="tech-badge">Bootstrap</span>
+                <span class="tech-badge">PHP</span>
+              </div>
+              <a href="#" class="project-card-link">
+                View Project <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES SECTION -->
+    <section class="section-lg" style="background-color: var(--color-bg-secondary);">
+      <div class="container">
+        <div class="section-header animate-fade-in-up">
+          <h2>Featured Case Studies</h2>
+          <p>In-depth looks at selected projects with methodology and results</p>
+        </div>
+
+        <div class="grid grid-cols-2 animate-fade-in-up">
+          <!-- Case Study 1 -->
+          <div class="card card-lg">
+            <h3 style="margin-bottom: var(--spacing-md);">TechFlow Solutions</h3>
+            <div style="margin-bottom: var(--spacing-md);">
+              <span class="badge badge-primary">BUSINESS</span>
+            </div>
+            <p style="margin-bottom: var(--spacing-lg);">
+              A SaaS startup needed a modern landing page to attract enterprise clients and generate qualified leads.
+            </p>
+            <h4 style="color: var(--color-accent-primary); margin-bottom: var(--spacing-md); margin-top: var(--spacing-lg);">Approach:</h4>
+            <ul style="list-style: none; margin-left: 0; color: var(--color-text-secondary);">
+              <li style="margin-bottom: var(--spacing-sm);">• Designed conversion-focused layout</li>
+              <li style="margin-bottom: var(--spacing-sm);">• Integrated Supabase for form submissions</li>
+              <li style="margin-bottom: var(--spacing-sm);">• Optimized for search engines</li>
+              <li style="margin-bottom: var(--spacing-sm);">• Achieved 90+ Lighthouse score</li>
+            </ul>
+            <h4 style="color: var(--color-success); margin-top: var(--spacing-lg); margin-bottom: var(--spacing-md);">Results:</h4>
+            <ul style="list-style: none; margin-left: 0; color: var(--color-text-secondary);">
+              <li style="margin-bottom: var(--spacing-sm);">✓ 3x increase in qualified leads</li>
+              <li style="margin-bottom: var(--spacing-sm);">✓ 2.3s page load time</li>
+              <li style="margin-bottom: var(--spacing-sm);">✓ 45% mobile traffic conversion</li>
+            </ul>
+          </div>
+
+          <!-- Case Study 2 -->
+          <div class="card card-lg">
+            <h3 style="margin-bottom: var(--spacing-md);">Central Academy Online</h3>
+            <div style="margin-bottom: var(--spacing-md);">
+              <span class="badge badge-secondary">EDUCATION</span>
+            </div>
+            <p style="margin-bottom: var(--spacing-lg);">
+              A mid-size school needed a modern digital presence with student enrollment, course information, and parent communication.
+            </p>
+            <h4 style="color: var(--color-accent-primary); margin-bottom: var(--spacing-md); margin-top: var(--spacing-lg);">Approach:</h4>
+            <ul style="list-style: none; margin-left: 0; color: var(--color-text-secondary);">
+              <li style="margin-bottom: var(--spacing-sm);">• Built custom enrollment system</li>
+              <li style="margin-bottom: var(--spacing-sm);">• Created secure student portal</li>
+              <li style="margin-bottom: var(--spacing-sm);">• Integrated event calendar</li>
+              <li style="margin-bottom: var(--spacing-sm);">• Implemented admin dashboard</li>
+            </ul>
+            <h4 style="color: var(--color-success); margin-top: var(--spacing-lg); margin-bottom: var(--spacing-md);">Results:</h4>
+            <ul style="list-style: none; margin-left: 0; color: var(--color-text-secondary);">
+              <li style="margin-bottom: var(--spacing-sm);">✓ 500+ enrolled students</li>
+              <li style="margin-bottom: var(--spacing-sm);">✓ 10,000+ monthly visitors</li>
+              <li style="margin-bottom: var(--spacing-sm);">✓ 50% reduction in admin workload</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-3xl);">
+          <a href="contact.html" class="btn btn-primary btn-lg">Discuss Your Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section-lg">
+      <div class="container">
+        <div class="cta-section animate-fade-in-up">
+          <div class="cta-section-content">
+            <h2>Ready to Build Your Next Project?</h2>
+            <p style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-2xl);">
+              Let's create something amazing together. Get in touch to discuss your ideas.
+            </p>
+            <div class="cta-section-buttons">
+              <a href="contact.html" class="btn btn-primary btn-lg">Start Your Project</a>
+              <a href="services.html" class="btn btn-secondary btn-lg">Explore Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Aks Prasad</h3>
+          <p>Modern websites built to make an impact.</p>
+          <div class="social-links">
+            <a href="https://www.fiverr.com/s/gvD4xbX" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
+            <a href="https://www.instagram.com/gamerxmagician/" target="_blank" rel="noopener noreferrer" title="Instagram">Instagram</a>
+            <a href="https://www.youtube.com/@_gamerxmagician" target="_blank" rel="noopener noreferrer" title="YouTube">YouTube</a>
+            <a href="mailto:aksprasad2006@gmail.com" title="Email">Email</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#business">Business Websites</a></li>
+            <li><a href="services.html#portfolio">Portfolio Sites</a></li>
+            <li><a href="services.html#landing">Landing Pages</a></li>
+            <li><a href="services.html#gaming">Gaming Websites</a></li>
+            <li><a href="services.html#education">School Websites</a></li>
+            <li><a href="services.html#apps">Web Apps</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>
+            <strong>Email:</strong><br>
+            <a href="mailto:aksprasad2006@gmail.com">aksprasad2006@gmail.com</a>
+          </p>
+          <p>
+            <strong>WhatsApp:</strong><br>
+            <a href="https://wa.me/9372573656" target="_blank">Chat with me</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Aks Prasad. All rights reserved.</p>
+        <p>Designed & built with modern web technologies.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/main.js"></script>
+  <script src="js/portfolio-filter.js"></script>
+</body>
+</html>
